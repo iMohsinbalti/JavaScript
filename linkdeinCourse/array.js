@@ -25,3 +25,11 @@ document.write("<br>", num);
 //From loweset to larget
 num.sort((a, b) => a - b);
 document.write("<br>", num);
+//Find Method
+const f = [100, 80, 30, 20, 10, 11, 110];
+const s_new = f.find((element) => element < 80);
+//it will return only first less then number
+console.log(s_new);
+const l_new = f.find((element) => element > 80);
+//it will return only first greter then number
+console.log(l_new);
