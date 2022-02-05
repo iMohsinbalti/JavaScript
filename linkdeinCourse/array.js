@@ -66,3 +66,43 @@ console.log(drink);
 
 const shift_item = drink.shift();
 console.log(shift_item);
+
+//Map
+const grade = [75, 80, 55, 73];
+let bonusgrade = grade.map((element) => {
+  return element + 5;
+});
+console.log("bonus grade", bonusgrade);
+const friends = [
+  { firstname: "Mohsin", lastname: "Ali" },
+  { firstname: "john", lastname: "smith" },
+  { firstname: "alex", lastname: "hale" },
+];
+
+let fullname = friends.map((fname) => {
+  return fname.firstname + " " + fname.lastname;
+});
+console.log(fullname);
+
+//Filter
+const pet = [
+  { name: "Fido", type: "dog" },
+  { name: "mano", type: "cat" },
+  { name: "Haz", type: "dog" },
+  { name: "Gratde", type: "cat" },
+];
+
+const cat = pet.filter((cat) => cat.type === "cat");
+console.log(cat);
+//Reduce
+const sales = [2.5, 4, 5.0, 1.75, 2.5, 6];
+const totalSales = sales.reduce((total, amount) => (total += amount));
+console.log(totalSales);
+//Flatmap
+const allowance = [[20], [15], [18]];
+const double = allowance.flatMap((value) => [value * 2]);
+console.log(double);
+
+const wordJumble = ["shampo", "condition", "soap"];
+const splitword = wordJumble.flatMap((word) => word.split(""));
+console.log(splitword);
