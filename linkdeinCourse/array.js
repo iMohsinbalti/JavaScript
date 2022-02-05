@@ -47,3 +47,22 @@ console.log(`Some state start with New ${SomeStates}`);
 
 const EveryStates = States.every((state) => state.startsWith("New"));
 console.log(`Every state start with New ${EveryStates}`);
+//Stack
+//Push and Pop
+console.log("Push and Pop");
+const drink = ["Cofee", "Juice", "Water"];
+console.log("The lenth of deink array is", drink.length);
+
+drink.push("Milk");
+console.log(drink);
+const pop_item = drink.pop();
+console.log(pop_item);
+//Unshift and shift
+console.log("shift and unshift");
+//unshift add the item at begning of array and shift remove from the begning
+
+drink.unshift("wine");
+console.log(drink);
+
+const shift_item = drink.shift();
+console.log(shift_item);
