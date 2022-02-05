@@ -33,3 +33,17 @@ console.log(s_new);
 const l_new = f.find((element) => element > 80);
 //it will return only first greter then number
 console.log(l_new);
+
+//Include() Method
+
+const score = [1, 2, 3, 4, 5, 6, 10];
+const Include = score.includes(6);
+console.log(Include, "Mohsin ali");
+
+//Some and Every
+const States = ["New york", "New Jersy", "New Zeland", "Calforna", "Albanma"];
+const SomeStates = States.some((state) => state.startsWith("New"));
+console.log(`Some state start with New ${SomeStates}`);
+
+const EveryStates = States.every((state) => state.startsWith("New"));
+console.log(`Every state start with New ${EveryStates}`);
