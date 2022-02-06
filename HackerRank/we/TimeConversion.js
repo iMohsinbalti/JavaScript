@@ -5,10 +5,15 @@ const h = n.substring(0, 2);
 if (s.includes("AM") && !h.includes("12")) {
   console.log(n);
 }
+
 if (s.includes("PM")) {
   const ns = (parseInt(n) + 12).toString();
   const ms = ns.concat(m);
   console.log(ms);
+}
+
+if (s.includes("PM") && h.includes("12")) {
+  console.log(n);
 }
 if (s.includes("AM") && h.includes("12")) {
   var ns = (parseInt(n) - 12).toString();
