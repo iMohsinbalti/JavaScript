@@ -48,3 +48,8 @@ const totalmovie = moive.reduce((total, mo) => {
   return total;
 }, 0);
 console.log(totalmovie);
+
+const arr = [-4, -9, -9, 0, 4, 1];
+
+let a = arr.filter((v) => v == -9);
+console.log(a);
