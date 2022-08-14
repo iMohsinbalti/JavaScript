@@ -82,4 +82,40 @@ person1.fullName = "Mohsin ALi";
 
 console.log(person1);
 
-console.log(person1.firstName);
+console.log(person1.firstName); //return Mohsin
+
+//Static Method and Properties.
+
+class Person {
+  constructor(fn, ln, age) {
+    this.firstName = fn;
+    this.lastName = ln;
+    this.age = age;
+  }
+  static desc = "This is static property";
+  get fullName() {
+    // now this method act as property
+    return `${this.firstName} ${this.lastName}`;
+  }
+  static get info() {
+    return "your are calling the static method of class";
+  }
+  setName(fn, ln) {
+    this.firstName = fn;
+    this.lastName = ln;
+  }
+  //we can set the above code we usig set keyword
+  set fullName(name) {
+    const [fn, ln] = name.split(" ");
+    this.firstName = fn;
+    this.lastName = ln;
+  }
+}
+
+const p = new Person("Mohisn", "ALi", 22);
+console.log(p.fullName); //retrun Mohin ali
+console.log(Person.firstName); //return undefined but we can use static keyword and make method and properities that area directly realted to the class.
+console.log(Person.info); //return your are calling the static method of class.
+console.log(Person.fname);
+
+console.log(Person.desc);
